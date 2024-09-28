@@ -19,12 +19,8 @@ import {
 import { MeshLineGeometry, MeshLineMaterial } from "meshline";
 
 extend({ MeshLineGeometry, MeshLineMaterial });
-useGLTF.preload(
-  "https://res.cloudinary.com/dcwsgwsfw/image/upload/v1727467633/ID_BASH_vn2laf.glb"
-);
-useTexture.preload(
-  "https://res.cloudinary.com/dcwsgwsfw/image/upload/v1727467633/STRIP_ygnm4l.png"
-);
+useGLTF.preload("https://res.cloudinary.com/dcwsgwsfw/image/upload/v1727533212/bash/untitled_th7qua.glb");
+useTexture.preload("https://res.cloudinary.com/dcwsgwsfw/image/upload/v1727533190/bash/Frame_4_feplbi.png");
 
 export default function App() {
   return (
@@ -78,12 +74,8 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
     angularDamping: 2,
     linearDamping: 2,
   };
-  const { nodes, materials } = useGLTF(
-    "https://res.cloudinary.com/dcwsgwsfw/image/upload/v1727467633/ID_BASH_vn2laf.glb"
-  );
-  const texture = useTexture(
-    "https://res.cloudinary.com/dcwsgwsfw/image/upload/v1727467633/STRIP_ygnm4l.png"
-  );
+  const { nodes, materials } = useGLTF("https://res.cloudinary.com/dcwsgwsfw/image/upload/v1727533212/bash/untitled_th7qua.glb");
+  const texture = useTexture("https://res.cloudinary.com/dcwsgwsfw/image/upload/v1727533190/bash/Frame_4_feplbi.png");
   const { width, height } = useThree((state) => state.size);
   const [curve] = useState(
     () =>
